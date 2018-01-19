@@ -1,0 +1,447 @@
+﻿<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        var get_industry_val = [];
+        jQuery("#get_industry").on("click",function(){
+            jQuery('.right-side-hexagon .hexagon.select span.hexagon-text').each(function(index){
+                get_industry_val[index] = jQuery(this).text();
+            });
+            var addColon = get_industry_val.join(", ");
+            if(addColon != ''){
+                jQuery("#hide_industry").text(addColon);
+            }else{
+                jQuery("#hide_industry").text('N/A');
+            }
+            jQuery("#selected_category").val(addColon);
+        });
+
+        jQuery(".ok_btn_class").on("click",function(){
+            window.location.href = "/email_setup";
+        });
+    });
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Kaastrup Andersen</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <section class="banner-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="logo">
+                        <a class="d-inline-block" href="https://www.kaastrupandersen.dk"><img src="images/logo.png" class="img-fluid center-block" alt="Image"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="banner-home-main">
+                        <h1>Technology Insights</h1>
+                        <h3>Predictions and trends for 2018</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#whats-hot" class="down-arrow"></a>
+    </section>
+
+    <section id="whats-hot" class="pt-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                    <h2>What’s hot 2018?</h2>
+                    <h3>Take a pick and vote!</h3>
+                    <p style="font-style:  italic;font-weight: 600;font-size: 14px;color:#003E5F;">Hint: you can choose more than one topic</p>
+                </div>
+            </div>
+            <div class="row mt-55">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+                   <div class="left-side-hexagon">
+                        <div class="hexagon blue-hexagon">
+                            <span class="hexagon-text">DATA</span>
+                            <span class="hexagon-select"></span>
+                        </div>
+                        <div class="hexagon red-hexagon">
+                            <span class="hexagon-text">IoT</span>
+                            <span class="hexagon-select"></span>
+                        </div>
+                        <div class="hexagon dark-orange-hexagon">
+                            <span class="hexagon-text">Business</span>
+                            <span class="hexagon-select"></span>
+                        </div>
+                        <div class="hexagon orange-hexagon">
+                            <span class="hexagon-text">IT</span>
+                            <span class="hexagon-select"></span>
+                        </div>
+                        <div class="hexagon green-hexagon">
+                            <span class="hexagon-text">Digitalization</span>
+                            <span class="hexagon-select"></span>
+                        </div>
+                   </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
+                    <div class="table-responsive">
+                        <div class="right-side-hexagon">
+                            <div class="hexagon green-hexagon hexagon-1" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-green" title="<p>3D printing or additive manufacturing is a process of making three dimensional solid objects from a digital file. The creation of a 3D printed object is achieved using additive processes. In an additive process an object is created by laying down successive layers of material until the object is created. Each of these layers can be seen as a thinly sliced horizontal cross-section of the eventual object.</p><p>3D printing is the opposite of subtractive manufacturing which is cutting out / hollowing out a piece of metal or plastic with for instance a milling machine. 3D printing enables you to produce complex (functional) shapes using less material than traditional manufacturing methods.</p>">
+                                <span class="hexagon-text">3D printing</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon dark-orange-hexagon hexagon-2" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-dark-orange" title="Today’s customers are mobile, digital, and connected in a big way. They want answers wherever they are, whenever they need them — fast. Make it easy for your customers to find information, manage their account, or connect with an agent effortlessly with Customer Community self-service communities and portals.">
+                                <span class="hexagon-text">Digital customer portals</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon orange-hexagon hexagon-3" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-orange" title="<p>An app is the common slang term for a software application or software program that can be run on a computer device to accomplish a task easier and more efficiently than we could do it ourselves as mere mortals. If you have a smartphone or computer tablet, you probably have used some game apps, news apps or even map apps to help you find the local coffee shop.</p><p>Application development is the name of the profession that employs people who design, develop, and deploy these computer applications.</p>">
+                                <span class="hexagon-text">Applications development</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon blue-hexagon hexagon-4" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-blue" title="<p>Traditionally, data has been residing in silos across the organization and the ecosystem in which it operates (external data). That’s a challenge: you can’t combine the right data to succeed in a big data project if that data is a bit everywhere in and out of the cloud.</p><p>A data lake is a place to put all the data enterprises (may) want to gather, store, analyze, and turn into insights and action, including structured, semi-structured, and unstructured data.</p>">
+                                <span class="hexagon-text">Data lakes</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon orange-hexagon hexagon-5" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-orange" title="<p>Edge computing allows data produced by internet of things (IoT) devices to be processed closer to where it is created instead of sending it across long routes to data centers or clouds. Doing this computing closer to the edge of the network lets organizations analyze important data in near real-time – a need of organizations across many industries, including manufacturing, health care, telecommunications, and finance.</p><p>The role of edge computing to date has mostly been used to ingest, store, filter, and send data to cloud systems. We are at a point in time, however, where these computing systems are packing more compute, storage, and analytic power to consume and act on the data at the machine location.</p>">
+                                <span class="hexagon-text">Edge computing</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon dark-orange-hexagon hexagon-6" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-dark-orange" title="A remote worker is someone who works outside of a traditional office. An employee might work from home, from a coffee shop, or from anywhere that is not a regular office; although depending on the type of job they do, they might find themselves going into an office on occasion (if the company’s hub is geographically close to them). A company might have a team of remote workers (i.e., a remote workforce) or a mix of both office workers and remote workers.">
+                                <span class="hexagon-text">Remote workers</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon red-hexagon hexagon-7" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-red" title="Audio, image, real-time video, motion, machine performance metrics, and other sensor-generated data is being combined with business, transactional, and other IT data to create opportunities for sophisticated analytics. The flexibility to run those analytics, either on massive data sets in IT or cloud infrastructures or as the data is acquired on smart sensors and embedded devices, is enabling organizations in many industries to develop intelligent products, devices, and services that expand the business impact of their data and analytics.">
+                                <span class="hexagon-text">Intelligent products</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon blue-hexagon hexagon-8" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-blue" title='<p>A data controller is the individual or the legal person who controls and is responsible for the keeping and use of personal information on a computer or in structured manual files. Being a data controller carries with it serious legal responsibilities, so you should be quite clear if these responsibilities apply to you or your organization.</p><p>If your organization controls and is responsible for the personal data which it holds, then your organization is a data controller. If, on the other hand, you hold the personal data, but some other organization decides and is responsible for what happens to the data, then that other organization is the data contoller, and your organization is a "data processor".</p>'>
+                                <span class="hexagon-text">Data control</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon red-hexagon hexagon-9" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-red" title="<p>Modern trends in manufacturing are defined by mass customization, small lot sizes, high variability of product types, and a changing product portfolio during the lifecycle of an automated productionsystem (aPS). These trends imply more complex aPSwhich supportchanges in the physical layout of theaPS including extensive technical updates. The complexity of the aPS, including automation hardware and automation software, is rising.</p><p>Since the proportion of system functionality that is realized by software is increasing, concepts for supporting automation engineers in handling this complexity are strongly required. Software as well as software engineering in this domain needto fulfill specific requirements, e.g. regarding real-time and reliability.</p>">
+                                <span class="hexagon-text">Automatic production</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon green-hexagon hexagon-10" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-green" title="<p>4D Printing is a new process for printing customizable smart materials. 4D Printing entails multi-material prints utilizing the capability of shape-transformation from one state to another, directly off the print-bed. This technique offers a streamlined path from idea to full functionality built directly into the materials, including; actuation, sensing, and material logic.</p><p>Potential applications include; robotics-like behavior without the reliance on complex electro-mechanical devices as well as adaptive products, garments or mechanisms that respond to user-demands and fluctuating environments.</p>">
+                                <span class="hexagon-text">4D printing</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon dark-orange-hexagon hexagon-11" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-dark-orange" title="Content marketing is an umbrella term covering a set of strategies, techniques, and tactics to fulfil business and customer goals by using the most relevant content to serve, attract, convert, retain, and engage customers in a trustworthy and valuable way.  Content marketing creates value where the goals/intent and preferences of audiences meet the narrative, proposition, and relevance of your content.">
+                                <span class="hexagon-text">Content marketing</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon orange-hexagon hexagon-12" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-orange" title="<p>Blockchain or distributed ledger technology revolves around an encoded and distributed database serving as a ledger whereby records regarding transactions are stored. Blockchains are tested and deployed across several use cases of digital trust and exchanges in all industries, far beyond cryptocurrencies and as the contractual backbone of a decentralized digital age.</p><p>Blockchain relies on peer-to-peer network principles whereby each encrypted block in the chain is linked to the next. Why the peer-to-peer network and absence of a central authority? Because blockchain was precisely “invented” to solve the challenge of the lack of a central authority in cryptocurrencies like Bitcoin or Ripple.</p>">
+                                <span class="hexagon-text">Blockchain</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon green-hexagon hexagon-13" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-green" title="Robotics is an interdisciplinary branch of engineering and science that includes mechanical engineering, electrical engineering, computer science, and others. Robotics deals with the design, construction, operation, and use of robots, as well as computer systems for their control, sensory feedback, and information processing.">
+                                <span class="hexagon-text">Robotics</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon dark-orange-hexagon hexagon-14" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-dark-orange" title="<p>Good user experience design is imperative for smoother adoption of Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR).</p><p>The UX focus of wow-factor experiences for VR/AR/MR must include careful attention to design of presence, narrative, engagement, and emotion. Immersive technologies signal an exciting crossroad for Human-Computer Interaction.</p>">
+                                <span class="hexagon-text">Immersive UX</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon dark-orange-hexagon hexagon-15" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-dark-orange" title="Customer centricity is sometimes used as a catchall term for talking about customer feedback or customer satisfaction results, but making people happy is only one part of the equation. To have sustained success, companies must understand current customer needs and wants, and ensure that there are the right internal and customer-facing strategies, processes, and marketing initiatives to satisfy them.">
+                                <span class="hexagon-text">Customer centricity</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon orange-hexagon hexagon-16" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-orange" title="<p>Virtual reality (VR), which can be referred to as immersive multimedia or computer-simulated reality, replicates an environment that simulates a physical presence in places in the real world or an imagined world, allowing the user to interact in that world.</p><p>Augmented reality (AR) is a live, direct or indirect view of a physical, real-world environment whose elements are augmented (or supplemented) by computer-generated sensory input such as sound, video, graphics or GPS data.</p>">
+                                <span class="hexagon-text">AR and VR</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon dark-orange-hexagon hexagon-17" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-dark-orange" title="<p>Hyperlocal advertising or hyper local social marketing allows brands to communicate to a group of individuals with similar interests in a specific community or neighborhood. Providing agents with opportunities to connect with customers on a more personal level further demonstrates that they care about them and the local community.</p><p>Hyperlocal advertising lets you hone your message so that it targets those people who share a neighborhood, or even an ethnicity within that neighborhood: You create messages that appeal directly to the local group you are targeting.</p>">
+                                <span class="hexagon-text">Hyper local advertising</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon orange-hexagon hexagon-18" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-orange" title="<p>Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.</p>">
+                                <span class="hexagon-text">Cloud computing</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon blue-hexagon hexagon-19" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-blue" title="<p>The GDPR replaces Data Protection Directive 95/46/EC and aims to harmonize data privacy laws across Europe, to protect and enforce data privacy of all EU data subjects, and to provide a consistent personal data protection framework to strengthen the digital market in the EU.</p><p>“Controllers” and “processors” of data need to abide by the GDPR. A data controller states how and why personal data is processed, while a processor is the party doing the actual processing of the data. So, the controller could be any organization, from a profit-seeking company to a charity or government. A processor could be an IT firm doing the actual data processing.</p>">
+                                <span class="hexagon-text">GDPR</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon green-hexagon hexagon-20" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-green" title="<p>Information management concerns the identification, optimization, custodianship, and connection of information and information-intensive processes to innovate, achieve competitive advantages, generate business and customer value, and thrive in an era where information is a core business asset and an economic good.</p>">
+                                <span class="hexagon-text">Information management</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon red-hexagon hexagon-21" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-red" title="<p>Industry 4.0 represents the fourth industrial revolution in manufacturing and industry. Industry 4.0 is the current industrial transformation with automation, data exchanges, cloud, cyber-physical systems, robots, Big Data, AI, IoT and (semi-)autonomous industrial techniques to realize smart industry and manufacturing goals in the intersection of people, new technologies, and innovation.</p>">
+                                <span class="hexagon-text">Industry 4.0</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon blue-hexagon hexagon-22" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-blue" title="<p>Big data is a term that describes the large volume of data – both structured and unstructured – that inundates a business on a day-to-day basis. But it’s not the amount of data that’s important. It’s what organizations do with the data that matters.</p><p>Big data can be analyzed for insights that lead to better decisions and strategic business moves.</p>">
+                                <span class="hexagon-text">Big Data</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon red-hexagon hexagon-23" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-red" title="<p>Four fundamental device management requirements exist for any Internet of Things (IoT) device deployment: provisioning and authentication, configuration and control, monitoring and diagnostics, and software updates and maintenance.</p>">
+                                <span class="hexagon-text">Device management</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon green-hexagon hexagon-24" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-green" title="<p>Digital twins are a dynamic software model of a physical thing or system. Digital twins are poised to transform manufacturing processes and offer new ways to reduce costs, monitor assets, optimize maintenance, reduce downtime and enable the creation of connected products. The digital twin model, although not new, is entering manufacturing and other industries fast. IoT is one of the drivers.</p>">
+                                <span class="hexagon-text">Digital twins</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon dark-orange-hexagon hexagon-25" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-dark-orange" title="<p>Machine learning is a subfield of artificial intelligence. Its goal is to enable computers to learn on their own. A machine’s learning algorithm enables it to identify patterns in observed data, build models that explain the world, and predict things without having explicit pre-programmed rules and models.</p>">
+                                <span class="hexagon-text">Machine Learning</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon dark-orange-hexagon hexagon-26" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-dark-orange" title="<p>Engines that insert rules and logic into AI systems and used for initial setup/training and ongoing maintenance and tuning. A mature technology, it is used in a wide variety of enterprise applications, assisting in or performing automated decision-making.</p>">
+                                <span class="hexagon-text">Improved decision making</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon orange-hexagon hexagon-27" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-orange" title="<p>Artificial intelligence is the study of agents that perceive the world around them, form plans, and make decisions to achieve their goals. Its foundations include mathematics, logic, philosophy, probability, linguistics, neuroscience, and decision theory. Many fields fall under the umbrella of AI, such as computer vision, robotics, machine learning, and natural language processing.</p>">
+                                <span class="hexagon-text">Artificial intelligence</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon red-hexagon hexagon-28" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-red" title="<p>A smart city is an urban area that uses different types of electronic data collection sensors to supply information used to manage assets and resources efficiently. This includes data collected from citizens, devices, and assets that is processed and analyzed to monitor and manage traffic and transportation systems, power plants, water supply networks, waste management, law enforcement, information systems, schools, libraries, hospitals, and other community services.</p><p>The smart city concept integrates information and communication technology (ICT), and various physical devices connected to the network (the Internet of things or IoT) to optimize the efficiency of city operations and services and connect to citizens. Smart city technology allows city officials to interact directly with both community and city infrastructure and to monitor what is happening in the city and how the city is evolving.</p>">
+                                <span class="hexagon-text">Smart cities</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon orange-hexagon hexagon-29" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-orange" title="<p>Cybersecurity refers to a set of techniques used to protect the integrity of networks, programs, and data from attack, damage or unauthorized access. The core functionality of cybersecurity involves protecting information and systems from major cyberthreats. These cyberthreats take many forms (e.g., application attacks, malware, ransomware, phishing, exploit kits).</p>">
+                                <span class="hexagon-text">Cybersecurity</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon green-hexagon hexagon-30" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-green" title="<p>Exponential data growth is a fundamental problem that is continuing to overwhelm most businesses, and it is accelerating. New digital business models are increasingly more complex; we are talking about entire ecosystems of data and companies that are able to effectively manage that complexity will clearly maintain a competitive advantage.</p><p>Unmanaged, that complexity becomes a barrier to innovation and inhibits our ability to derive meaningful insights and, in fact, becomes a barrier to achieving the automation and efficiency we desire. To seize the full potential of digital, companies must develop data strategies, and better information, and data management discipline.</p>">
+                                <span class="hexagon-text">Digital <br> supply <br> chain</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon red-hexagon hexagon-31" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-red" title="<p>The Industrial Internet of Things has been heralded primarily as a way to improve operational efficiency. But in today’s environment, companies can also benefit greatly by seeing it as a tool for finding growth in unexpected opportunities. In the future, successful companies will use the Industrial Internet of Things to capture new growth through three approaches: boost revenues by increasing production and creating new hybrid business models, exploit intelligent technologies to fuel innovation, and transform their workforce.</p>">
+                                <span class="hexagon-text">Industrial IoT</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon orange-hexagon hexagon-32" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-orange" title="<p>Cognitive computing comes from a mashup of cognitive science — the study of the human brain and how it functions — and computer science, and the results will have far-reaching impacts on our private lives, healthcare, business, and more.</p><p>The goal of cognitive computing is to simulate human thought processes in a computerized model. Using self-learning algorithms that use data mining, pattern recognition, and natural language processing, the computer can mimic the way the human brain works.</p>">
+                                <span class="hexagon-text">Cognitive computing</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon orange-hexagon hexagon-33" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-orange" title='<p>In essence, servitization is a transformation journey - it involves firms (often manufacturing firms) developing the capabilities they need to provide services and solutions that supplement their traditional product offerings.</p><p>Put in another way, servitization is the innovation of organization’s capabilities and processes to better create mutual value through a shift from selling product to selling Product-Service Systems. Two other definitions accompany this:</p><ol type="i"><li>the idea of a product-service system - "an integrated product and service offering that delivers value in use".</li><li>a "servitized organization which designs, builds and delivers an integrated product and service offering that delivers value in use".</li></ol>'>
+                                <span class="hexagon-text">Servitization</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon red-hexagon hexagon-34" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-red" title='<p>IoT is the network of physical items, equipped with electronics, transducers such as sensors and actuators, connectivity and software to capture, filter and exchange data about themselves and their environment for various IoT use cases and business purposes.</p><p>IoT is an essential driver for customer-facing innovation, data-driven optimization and automation, digital transformation and entirely new applications, business models and revenue streams across all sectors.</p>'>
+                                <span class="hexagon-text">IoT</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon green-hexagon hexagon-35" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-green" title='<p>Knowing the location and monitoring the health of your most valuable assets is critical to business operations. Thanks to Internet of Things (IoT) technology, remote tracking of everything from heavy equipment to fleets to luggage, patients, pets and kids can reduce risk, minimize inventory, save money and create new revenue streams for businesses, in addition to making life easier for consumers.</p><p>By building a flexible, customized tracking system, you can reap the benefits of asset tracking without having to make significant changes to your business, saving you both time and money. A number of industries have adopted IoT-enabled asset tracking already, paving the way for the creation of new business opportunities and more efficient operations.</p>'>
+                                <span class="hexagon-text">Asset <br> tracking</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                            <div class="hexagon orange-hexagon hexagon-36" data-toggle="tooltip" data-placement="bottom" data-custom-class="tooltip-orange" title='<p>Robotic process automation is a software, that operates as a virtual workforce controlled by the business operations teams. A software or robot emulates human execution of tasks via existing user interfaces: it captures and interprets existing applications, manipulates data, triggers responses and communicates with other systems, it can be applied to existing applications (without changing the current IT landscape).</p>'>
+                                <span class="hexagon-text">Finance robotics</span>
+                                <span class="hexagon-select"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center mt-70 mb-70">
+                    <button type="button" id="get_industry" class="btn btn-lg btn-green" data-toggle="modal" data-target=".bd-example-modal-lg">VOTE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade bd-example-modal-lg" id="form_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <form method="post" action="" class="modal-dialog modal-lg" id="needs-validation" novalidate>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Submit answer to survey</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label>First Name <span class="text-danger">*</span></label>
+                                <input class="form-control" id="first_name" name="first_name"  type="text" required>
+                                <div class="invalid-feedback">Please enter First Name</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label>Last Name <span class="text-danger">*</span></label>
+                                <input class="form-control" id="last_name" name="last_name" type="text" required>
+                                <div class="invalid-feedback">Please enter Last Name</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label>Work Email <span class="text-danger">*</span></label>
+                                <input class="form-control" id="work_email" name="work_email" type="email" required>
+                                <div class="invalid-feedback">Please enter valid Work Email</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label>Company</label>
+                                <input class="form-control" name="company"type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label>Job Title</label>
+                                <input class="form-control" name="job_title" type="text">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label>Industry</label>
+                                <input class="form-control" id="industry" name="industry" id="industry" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label>Country</label>
+                                <input class="form-control" name="country" type="text">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input class="form-control" name="phone" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="form-group">
+                                <label>Selected Categories</label>
+                                <div id="hide_industry">N/A</div>
+                                <input type="hidden" name="selected_category" id="selected_category">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="form-group">
+                                <label>Comments</label>
+                                <textarea class="form-control" maxlength="300" name="comment" placeholder="(Max 300 chars)"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" name="chk_update" class="custom-control-input" id="customCheck1">
+                                    <div class="invalid-feedback">Text With error</div>
+                                    <label class="custom-control-label" for="customCheck1" style="font-weight: 400;">Yes, please contact me with an update to this survey.</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" name="chk_subscribe" class="custom-control-input" id="customCheck2">
+                                    <div class="invalid-feedback">Text With error</div>
+                                    <label class="custom-control-label" for="customCheck2" style="font-weight: 400;">Yes, I would like to subscribe to the k|a newsletter</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" name="frm_submit" class="btn btn-green">SUBMIT</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal fade" id="ThankYou" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <form class="modal-dialog modal-lg" id="needs-validation" novalidate>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center thank_you_msg_body">
+                    <img src="images/success-msg.png" class="img-fluid" alt="Image" style="margin-bottom: 40px;">
+                    <h2>Thank you for voting</h2>
+                    <p>we will send you a report of the survey once voting is closed!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-green ok_btn_class" data-dismiss="modal" aria-label="Close">OK</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    (function(jQuery){
+        function processForm( e ){
+
+            var fname = jQuery('#first_name').val();
+            var lname = jQuery('#last_name').val();
+            var email = jQuery('#work_email').val();
+
+            if (fname == '' || lname == '' || email == '') {
+                return false;
+            }
+
+            e.preventDefault();
+
+            jQuery.ajax({
+                url: 'mail_process.php',
+                dataType: 'json',
+                type: 'post',
+                contentType: 'application/x-www-form-urlencoded',
+                data: jQuery(this).serialize(),
+                success: function( data ){
+                    if(data.status != 'success'){
+                        jQuery('.thank_you_msg_body').html("<p style='color:red'>"+data.msg+"</p>");
+                    }
+                    jQuery('#form_modal').modal('hide');
+                    jQuery('#ThankYou').modal('show');
+                },
+                error : function(data) 
+                {
+                    jQuery('.thank_you_msg_body').html("<p style='color:red'>Something went wrong! Please try again letter</p>");
+                    jQuery('#form_modal').modal('hide');
+                    jQuery('#ThankYou').modal('show');
+                }
+            });
+        }
+
+        jQuery('#needs-validation').submit( processForm );
+    })(jQuery);
+</script>
